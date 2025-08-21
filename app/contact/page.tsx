@@ -320,7 +320,7 @@ export default function ContactPage() {
                       <Input
                         id="subject"
                         name="subject"
-                        placeholder="আপনার মনে কী আছে?"
+                        placeholder="আপনি কী ভাবছেন?"
                         className="mt-1 bg-background border-border text-foreground"
                         value={formData.subject}
                         onChange={(e) =>
@@ -339,7 +339,7 @@ export default function ContactPage() {
                       <Textarea
                         id="message"
                         name="message"
-                        placeholder="আপনি কী ভাবছেন তা বলুন..."
+                        placeholder="আপনার কী মনে হচ্ছে, তা আমাকে জানান…"
                         className="mt-1 min-h-[120px] resize-none bg-background border-border text-foreground"
                         value={formData.message}
                         onChange={(e) =>
