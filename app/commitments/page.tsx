@@ -65,18 +65,12 @@ export default function CommitmentsPage() {
             <Card key={index} className="group transition-all duration-200">
               <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-lg"></div>
               <CardHeader className="relative z-10">
-                <div className="flex items-start gap-4">
+                <div className="flex items-center gap-4">
                   <div className="flex-shrink-0 p-3 bg-primary/10 rounded-full group-hover:bg-primary/20 transition-colors duration-300">
                     <commitment.icon className="h-6 w-6 text-primary group-hover:rotate-12 transition-transform duration-300" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
-                      <Badge
-                        variant="outline"
-                        className="group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300"
-                      >
-                        {index + 1}
-                      </Badge>
                       <CardTitle className="text-xl group-hover:text-primary transition-colors duration-300">
                         {commitment.title}
                       </CardTitle>

@@ -33,31 +33,31 @@ export default function HomePage() {
   const professionalExperience = [
     {
       icon: Briefcase,
-      title: "সহ-প্রতিষ্ঠাতা ও প্রধান নির্বাহী কর্মকর্তা",
-      company: "Academic Affiliation, IT For All",
+      title: "সহ-প্রতিষ্ঠাতা ও সিইও, IT For All",
+      company: "একাডেমিক অ্যাফিলিয়েশন",
       period: "২০২২ - বর্তমান",
       description:
-        "প্রযুক্তি শিক্ষার প্রসারে বিশ্ববিদ্যালয় শিক্ষার্থীদের জন্য প্রশিক্ষণ প্রোগ্রাম পরিচালনা। দক্ষতা উন্নয়নে লক্ষ্য রেখে পাঠ্যক্রম নকশা ও বাস্তবায়ন।",
+        "আমরা 'IT For All' শুরু করেছিলাম একটা সহজ লক্ষ্য নিয়ে: বিশ্ববিদ্যালয়ের শিক্ষার্থীদের ভবিষ্যতের জন্য প্রয়োজনীয় প্রযুক্তিগত দক্ষতায় পারদর্শী করে তোলা। আমি নিজে তাদের জন্য হাতে-কলমে প্রশিক্ষণ প্রোগ্রাম ডিজাইন ও পরিচালনার কাজটা দেখি।",
       techTerms:
         "Web Development, AI Tools, Research Platforms, Learning Management Systems",
     },
     {
       icon: Code,
-      title: "ডেভেলপার ও আইটি কনসালট্যান্ট",
-      company: "Supreme Court of Bangladesh (ICT)",
+      title: "ডেভেলপার ও আইটি পরামর্শক",
+      company: "বাংলাদেশ সুপ্রিম কোর্ট (আইসিটি)",
       period: "২০২১ - ২০২২",
       description:
-        "সুপ্রিম কোর্টের আইসিটি অবকাঠামো উন্নয়নে প্রযুক্তিগত সহায়তা প্রদান। ন্যায়বিচার প্রক্রিয়ায় ডিজিটাল সলিউশন বাস্তবায়নে অবদান।",
+        "আমার দেশের বিচার ব্যবস্থাকে আধুনিক করার এক অসাধারণ সুযোগ হয়েছিল। সুপ্রিম কোর্টের আইসিটি অবকাঠামো উন্নত করার জন্য আমি প্রযুক্তিগত সহায়তা দিয়েছি এবং ডিজিটাল সলিউশন বাস্তবায়নে কাজ করেছি।",
       techTerms:
         "IT Consulting, System Integration, Database Management, Cybersecurity",
     },
     {
       icon: Cpu,
-      title: "AI Engineer ও Data Scientist",
-      company: "Google DeepMind Project, Turing California, USA",
+      title: "এআই ইঞ্জিনিয়ার ও ডেটা সায়েন্টিস্ট",
+      company: "গুগল ডিপমাইন্ড প্রজেক্ট, টুরিং ক্যালিফোর্নিয়া, USA",
       period: "২০২৩ - বর্তমান",
       description:
-        "আন্তর্জাতিক গবেষণা দলে মেশিন লার্নিং ও কৃত্রিম বুদ্ধিমত্তা প্রকল্পে কাজ। উন্নত অ্যালগরিদম ও নিউরাল নেটওয়ার্ক আর্কিটেকচার উন্নয়নে অবদান।",
+        "একটি আন্তর্জাতিক গবেষক দলের সাথে আমি বিশ্বের সর্বাধুনিক মেশিন লার্নিং প্রকল্পে কাজ করি। আমার মূল লক্ষ্য হলো এমন উন্নত অ্যালগরিদম ও নিউরাল নেটওয়ার্ক তৈরি করা, যা কৃত্রিম বুদ্ধিমত্তার জগতে নতুন দিগন্ত উন্মোচন করবে।",
       techTerms:
         "Deep Learning, Transformer Models, NLP, Reinforcement Learning, TensorFlow, PyTorch",
     },
@@ -66,23 +66,23 @@ export default function HomePage() {
   const achievements = [
     {
       icon: Users,
-      title: "YSSE সেমিনার",
+      title: "YSSE সেমিনারে মূল বক্তা",
       description:
-        "আমি YSSE তে 'Application of AI in Leadership Productivity' সেমিনারে Keynote Speaker হিসেবে অংশগ্রহণ করেছি। এখানে আমি বাংলাদেশি তরুণ উদ্যোক্তাদের জন্য নেতৃত্ব ও প্রযুক্তি বিষয়ে আমার অভিজ্ঞতা শেয়ার করেছি।",
+        "YSSE-এর 'AI in Leadership' সেমিনারে মূল বক্তা হিসেবে আমন্ত্রণ পাওয়া আমার জন্য অত্যন্ত সম্মানের ছিল। আমি বাংলাদেশের তরুণ উদ্যোক্তাদের সাথে আমার অভিজ্ঞতা ভাগ করে নিয়েছি এবং আলোচনা করেছি কীভাবে প্রযুক্তি নেতৃত্বকে বদলে দিতে পারে।",
       location: "বাংলাদেশ",
     },
     {
       icon: Trophy,
-      title: "ওয়ার্ল্ড ইয়ুথ লিডারশিপ কনফারেন্স",
+      title: "ওয়ার্ল্ড ইয়ুথ লিডারশিপ কনফারেন্সে প্যানেলিস্ট",
       description:
-        "আমি দুবাইয়ে আয়োজিত World Youth Leadership Conference এ প্যানেলিস্ট হিসেবে অংশ নিয়েছি। বাংলাদেশকে প্রতিনিধিত্ব করে global technology ও leadership নিয়ে আলোচনা করেছি।",
+        "দুবাইয়ের বিশ্বমঞ্চে বাংলাদেশের প্রতিনিধিত্ব করা আমার জন্য একটি গর্বের মুহূর্ত ছিল। একজন প্যানেলিস্ট হিসেবে আমি বিশ্বের বিভিন্ন দেশ থেকে আসা তরুণ নেতাদের কাছে প্রযুক্তি ও নেতৃত্বের ভবিষ্যৎ নিয়ে আমাদের দেশের perspective তুলে ধরেছি।",
       location: "দুবাই, UAE",
     },
     {
       icon: Award,
-      title: "নীতি ও আইন সংক্রান্ত পরামর্শ",
+      title: "জাতীয় সাইবার আইন বিষয়ে পরামর্শ",
       description:
-        "আমি বাংলাদেশের সাইবার সিকিউরিটি আইন ও সিকিউরিটি পলিসি নিয়ে মাননীয় চিফ প্রসিকিউটরের সঙ্গে মিটিং করেছি। দেশের আইন ও বিচার ব্যবস্থার উন্নয়নে আমার মতামত উপস্থাপন করেছি।",
+        "বাংলাদেশের সাইবার নিরাপত্তা আইন ও নীতিমালা নিয়ে মাননীয় প্রধান প্রসিকিউটরের সাথে পরামর্শ করার মতো গুরুত্বপূর্ণ দায়িত্ব আমার উপর ছিল। দেশের আইনি কাঠামোকে আরও শক্তিশালী করতে আমার প্রযুক্তিগত জ্ঞান কাজে লাগানোর সুযোগ পেয়ে আমি গর্বিত।",
       location: "বাংলাদেশ",
     },
   ];
@@ -90,47 +90,47 @@ export default function HomePage() {
   const duWorks = [
     {
       icon: BookOpen,
-      title: "IT For All - Academic Affiliation",
+      title: "'IT For All'-এর মাধ্যমে ৬০০০+ শিক্ষার্থীকে প্রশিক্ষণ",
       description:
-        "ঢাকা বিশ্ববিদ্যালয়ে 'IT For All - Academic Affiliation' এর মাধ্যমে প্রায় ৬০০০ শিক্ষার্থীকে AI, IT, Web Development, Latex এবং Higher Studies বিষয়ে প্রশিক্ষণ প্রদান করা হয়েছে। কার্যক্রমে অফলাইন ক্লাস, অনলাইন সেশন ও রিসোর্স শেয়ারিং অন্তর্ভুক্ত ছিল।",
+        "ঢাকা বিশ্ববিদ্যালয়ে আমাদের 'IT For All' উদ্যোগের মাধ্যমে আমরা ৬,০০০ এরও বেশি সহপাঠীকে AI, ওয়েব ডেভেলপমেন্ট, LaTeX এবং উচ্চশিক্ষার প্রস্তুতি বিষয়ে বিনামূল্যে প্রশিক্ষণ দিয়েছি। অনলাইন ও অফলাইন সেশনের মাধ্যমে আমরা এই কাজটি করেছি।",
       link: "https://it-for-all.com/",
       facebook: "https://www.facebook.com/share/g/1E3jefXZMT/",
       image: "/image12.png",
     },
     {
       icon: Users,
-      title: "সিভি রাইটিং ও ক্যারিয়ার আলোচনা",
+      title: "ক্যারিয়ার ও সিভি কর্মশালা",
       description:
-        "মুহসিন হলের শিক্ষার্থীদের সাথে সিভি রাইটিং, রিমোট জবের সুযোগ এবং ক্যারিয়ার পরিকল্পনা নিয়ে আলোচনা করা হয়েছে। এই সেশন শিক্ষার্থীদের বাস্তবধর্মী দিকনির্দেশনা প্রদান করেছে।",
+        "মুহসিন হলের শিক্ষার্থীদের সাথে আমি তাদের ক্যারিয়ার পরিকল্পনা নিয়ে একটি বাস্তবসম্মত আলোচনায় বসেছিলাম। কীভাবে একটি চমৎকার সিভি তৈরি করা যায় থেকে শুরু করে রিমোট জব খোঁজার উপায় পর্যন্ত সবকিছু নিয়ে কথা বলেছি, যাতে তারা নিজেদের ভবিষ্যৎ পথটা সহজে খুঁজে নিতে পারে।",
       image: "/image14.png",
     },
     {
       icon: GraduationCap,
-      title: "DU Digitalization Program",
+      title: "ডিজিটাল ঢাকা বিশ্ববিদ্যালয়ের পক্ষে প্রস্তাবনা",
       description:
-        "বায়োলজি ফ্যাকাল্টিতে অনুষ্ঠিত 'DU Digitalization Program'-এ ছাত্র বক্তা হিসেবে প্রস্তাবনা উপস্থাপন করা হয়। সেগুলো মাননীয় ডীনস মহোদয় ও প্রো-ভিসি (শিক্ষা) এর নিকট তুলে ধরা হয়।",
+        "‘DU Digitalization Program’-এ একজন ছাত্র প্রতিনিধি হিসেবে আমি আমাদের ক্যাম্পাসকে আরও আধুনিক করার জন্য প্রস্তাবনাগুলো সরাসরি ডিন এবং প্রো-ভিসি (শিক্ষা) মহোদয়ের কাছে উপস্থাপন করি। শিক্ষার্থী হিসেবে আমাদের চাওয়াগুলো আমি তাদের সামনে তুলে ধরেছি।",
       image: "/image17.jpg",
     },
     {
       icon: UtensilsCrossed,
-      title: "মোকাররম এরিয়াতে ক্যান্টিন উদ্যোগ",
+      title: "নতুন ক্যান্টিনের জন্য উদ্যোগ",
       description:
-        "মোকাররম এরিয়াতে ক্যান্টিন স্থাপনের দাবি নিয়ে সচেতনতা প্রচার চালানো হয়। এ বিষয়ে ICT সেল এর মাননীয় ডিরেক্টরকে লিখিত প্রস্তাব ও হ্যান্ডবিল প্রদান করা হয়।",
+        "মোকাররম ভবনের আশেপাশে শিক্ষার্থীদের একটি ভালো ক্যান্টিনের প্রয়োজন দেখে, আমি একটি নতুন ক্যান্টিন স্থাপনের জন্য উদ্যোগ নিই। আমরা শুধু মুখেই বলিনি, বরং একটি আনুষ্ঠানিক প্রস্তাব জমা দিয়েছি এবং দাবিটি বাস্তবায়নের জন্য সচেতনতা তৈরি করেছি।",
       image: "/image3.png",
     },
     {
       icon: Building2,
-      title: "তরুণ উদ্যোক্তাদের জন্য অফিস স্পেস",
+      title: "শিক্ষার্থী উদ্যোক্তাদের জন্য কর্মক্ষেত্রের ব্যবস্থা",
       description:
-        "ইঞ্জিনিয়ারিং ফ্যাকাল্টির ডিন ম্যাডামের সাথে প্রযুক্তি খাতের উন্নয়ন নিয়ে নীতি-আলোচনা হয়। আলোচনায় ২১ তলার একটি ফ্লোর তরুণ উদ্যোক্তাদের জন্য বরাদ্দের আশ্বাস প্রদান করা হয়।",
+        "বিশ্ববিদ্যালয়ের তরুণ উদ্ভাবকদের জন্য কথা বলতে আমি ইঞ্জিনিয়ারিং ফ্যাকাল্টির ডিন ম্যাডামের সাথে দেখা করি। ফলাফল? আমরা তরুণ উদ্যোক্তাদের জন্য ২১ তলা ভবনের একটি সম্পূর্ণ ফ্লোর অফিস স্পেস হিসেবে বরাদ্দের প্রতিশ্রুতি আদায় করতে সক্ষম হয়েছি।",
       image: "/image11.png",
     },
     {
       icon: Cpu,
-      title: "AI and IT For All Program",
+      title: "হাতে-কলমে এআই ও আইটি কর্মশালা",
       description:
-        "ফার্মেসি লেকচার থিয়েটারে প্রায় ১০০ শিক্ষার্থী অংশগ্রহণে 'AI and IT For All Program' অনুষ্ঠিত হয়। প্রোগ্রামে কৃত্রিম বুদ্ধিমত্তা ও তথ্যপ্রযুক্তি বিষয়ক হাতে-কলমে প্রশিক্ষণ প্রদান করা হয়।",
-      image: "/image17.jpg",
+        "আমাদের 'AI and IT For All' প্রোগ্রামে ফার্মেসি লেকচার থিয়েটার প্রায় ১০০ জন শিক্ষার্থীর অংশগ্রহণে পূর্ণ ছিল। এটা শুধু কোনো লেকচার ছিল না, এটি ছিল একটি হাতে-কলমে কর্মশালা, যেখানে আমরা সবাই একসাথে কৃত্রিম বুদ্ধিমত্তার জগতে ডুব দিয়েছিলাম।",
+      image: "/image15.jpg",
     },
   ];
 
@@ -160,21 +160,17 @@ export default function HomePage() {
               <span className="text-primary">ডিজিটাল ভবিষ্যৎ</span>
             </h1>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              প্রযুক্তি ও উদ্ভাবনের মাধ্যমে আমরা এমন সমাধান তৈরি করছি, যা{" "}
+              আমার প্রতিটি উদ্যোগের লক্ষ্য হলো{" "}
               <span className="font-semibold text-primary">
-                AI-ভিত্তিক সিস্টেম
-              </span>{" "}
-              উন্নয়ন,
+                শিক্ষার্থীদের যুগোপযোগী দক্ষতায় পারদর্শী করা
+              </span>
+              ,{" "}
               <span className="font-semibold text-primary">
-                {" "}
-                শিক্ষার্থীদের দক্ষতা বৃদ্ধি
+                আধুনিক AI-সিস্টেম তৈরি করা
               </span>{" "}
-              এবং
-              <span className="font-semibold text-primary">
-                {" "}
-                আন্তর্জাতিক অঙ্গনে
-              </span>{" "}
-              বাংলাদেশের ইতিবাচক ভূমিকা রাখতে সহায়তা করে।
+              এবং{" "}
+              <span className="font-semibold text-primary">বিশ্ব দরবারে</span>{" "}
+              বাংলাদেশের ভাবমূর্তি উজ্জ্বল করা।
             </p>
 
             <div className="flex flex-wrap gap-4 mt-12">
@@ -200,8 +196,8 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="flex gap-6 justify-center">
-            <div className="w-80 h-96 bg-muted rounded-lg overflow-hidden shadow-lg">
+          <div className="flex flex-col md:flex-row gap-6 justify-center">
+            <div className="w-full h-full md:w-80 md:h-96 bg-muted rounded-lg overflow-hidden shadow-lg">
               <Image
                 src="/image7.png?height=400&width=320"
                 alt=""
@@ -210,8 +206,8 @@ export default function HomePage() {
                 className="rounded-lg object-cover w-full h-full"
               />
             </div>
-            <div className="flex flex-col gap-4">
-              <div className="w-24 h-28 bg-muted rounded-lg overflow-hidden shadow-md">
+            <div className="flex flex-row md:flex-col gap-4">
+              <div className="w-full h-32 md:w-24 md:h-28 bg-muted rounded-lg overflow-hidden shadow-md">
                 <Image
                   src="/image9.png?height=112&width=96"
                   alt=""
@@ -220,7 +216,7 @@ export default function HomePage() {
                   className="rounded-lg object-cover w-full h-full"
                 />
               </div>
-              <div className="w-24 h-28 bg-muted rounded-lg overflow-hidden shadow-md">
+              <div className="w-full h-32 md:w-24 md:h-28 bg-muted rounded-lg overflow-hidden shadow-md">
                 <Image
                   src="/image1.png?height=112&width=96"
                   alt=""
@@ -229,7 +225,7 @@ export default function HomePage() {
                   className="rounded-lg object-cover w-full h-full"
                 />
               </div>
-              <div className="w-24 h-28 bg-muted rounded-lg overflow-hidden shadow-md">
+              <div className="w-full h-32 md:w-24 md:h-28 bg-muted rounded-lg overflow-hidden shadow-md">
                 <Image
                   src="/image13.png?height=112&width=96"
                   alt=""
@@ -248,7 +244,8 @@ export default function HomePage() {
           ঢাকা বিশ্ববিদ্যালয়ের জন্য আমার কাজ
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          ঢাবির শিক্ষার্থীদের জন্য আমার বাস্তব অবদান এবং উন্নয়নমূলক কার্যক্রম।
+          ঢাকা বিশ্ববিদ্যালয়ের শিক্ষার্থীদের জন্য আমার নেওয়া কিছু বাস্তব
+          উদ্যোগ এখানে তুলে ধরলাম
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {duWorks.map((item, index) => (
@@ -302,7 +299,7 @@ export default function HomePage() {
                     src={`${item.image}?height=128&width=200&query=${item.title} DU work`}
                     alt={item.title}
                     width={200}
-                    height={128}
+                    height={168}
                     className="rounded-md object-cover w-full h-full"
                   />
                 </div>
@@ -318,8 +315,8 @@ export default function HomePage() {
             ঢাকা বিশ্ববিদ্যালয়ের জন্য আমার অঙ্গীকারসমূহ
           </h2>
           <p className="text-center text-primary-foreground/80 mb-12 max-w-2xl mx-auto">
-            ঢাবিকে world-class প্রতিষ্ঠানে রূপান্তরিত করার আমার বাস্তবায়নযোগ্য
-            plan।
+            আমাদের বিশ্ববিদ্যালয়কে বিশ্বমঞ্চে সেরা হিসেবে দেখার জন্য আমার
+            সুস্পষ্ট লক্ষ্যগুলো এখানে দেওয়া হলো
           </p>
           <div className="max-w-4xl mx-auto">
             <div className="space-y-4">
@@ -360,7 +357,8 @@ export default function HomePage() {
             আমার পেশাগত অভিজ্ঞতা
           </h2>
           <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Technology জগতে আমার প্রকৃত অভিজ্ঞতা এবং অবদান।
+            প্রযুক্তি শিল্পে সরাসরি কাজ করার মাধ্যমে আমি যে অভিজ্ঞতা ও দক্ষতা
+            অর্জন করেছি, তা-ই আমার শক্তি
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {professionalExperience.map((exp, index) => (
@@ -426,8 +424,8 @@ export default function HomePage() {
             গুরুত্বপূর্ণ অর্জনসমূহ
           </h2>
           <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            প্রকৃত achievement, প্রকৃত impact। এখানে আমার সেই সব কাজ যা সরাসরি
-            শিক্ষার্থীদের উপকার করেছে।
+            এখানে আমার সেইসব উদ্যোগের কথা বলা হয়েছে, যা সরাসরি শিক্ষার্থীদের
+            জীবনে ইতিবাচক পরিবর্তন এনেছে
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {achievements.map((item, index) => (
@@ -466,11 +464,11 @@ export default function HomePage() {
       <section className="bg-primary text-primary-foreground py-16 text-center">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold font-serif text-center mb-4">
-            ঢাকা বিশ্ববিদ্যালয়ের জন্য প্রকৃত পরিবর্তনের জন্য প্রস্তুত?
+            আসুন, একসাথে গড়ি আমাদের স্বপ্নের বিশ্ববিদ্যালয়
           </h2>
           <p className="text-center text-primary-foreground/80 mb-12 max-w-2xl mx-auto">
-            আমি কেবল প্রতিশ্রুতি দিচ্ছি না - আমি ফলাফল প্রদানের জন্য এসেছি। চলুন
-            একসাথে ঢাকা বিশ্ববিদ্যালয়ের ডিজিটাল ভবিষ্যৎ গড়ি।
+            আমি শুধু প্রতিশ্রুতি দিতে আসিনি, আমি কাজ করতে এসেছি। চলুন, সবাই মিলে
+            ঢাকা বিশ্ববিদ্যালয়ের জন্য একটি ডিজিটাল ভবিষ্যৎ নিশ্চিত করি
           </p>
           <Button
             variant="secondary"

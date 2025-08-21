@@ -1,6 +1,7 @@
 "use client";
 
-import type React from "react";
+import React, { useState, useEffect } from "react";
+import emailjs from "@emailjs/browser";
 
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
@@ -26,12 +27,20 @@ import {
   Check,
   MessageSquare,
 } from "lucide-react";
-import { useState } from "react";
 
 export default function ContactPage() {
+  // --- Your EmailJS Credentials ---
+  const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ?? "";
+  const EMAILJS_CONTACT_TEMPLATE_ID =
+    process.env.NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID ?? "";
+  const EMAILJS_ANONYMOUS_TEMPLATE_ID =
+    process.env.NEXT_PUBLIC_EMAILJS_ANONYMOUS_TEMPLATE_ID ?? "";
+  const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY ?? "";
+
   const [copiedEmail, setCopiedEmail] = useState(false);
   const [copiedPhone, setCopiedPhone] = useState(false);
   const [showAnonymous, setShowAnonymous] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -40,6 +49,11 @@ export default function ContactPage() {
   });
   const [anonymousMessage, setAnonymousMessage] = useState("");
   const { toast } = useToast();
+
+  // Initialize EmailJS once when the component mounts
+  useEffect(() => {
+    emailjs.init(EMAILJS_PUBLIC_KEY);
+  }, []);
 
   const copyToClipboard = async (text: string, type: "email" | "phone") => {
     try {
@@ -62,28 +76,68 @@ export default function ContactPage() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "বার্তা পাঠানো হয়েছে!",
-      description: "আপনার বার্তা সফলভাবে পাঠানো হয়েছে। আমি শীঘ্রই উত্তর দেব।",
-    });
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    });
+    if (isSubmitting) return;
+    setIsSubmitting(true);
+
+    try {
+      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_CONTACT_TEMPLATE_ID, {
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      });
+
+      toast({
+        title: "বার্তা পাঠানো হয়েছে!",
+        description:
+          "আপনার বার্তা সফলভাবে পাঠানো হয়েছে। আমি শীঘ্রই উত্তর দেব।",
+      });
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      toast({
+        title: "ত্রুটি!",
+        description:
+          "বার্তা পাঠাতে সমস্যা হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন।",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
-  const handleAnonymousOpinion = () => {
-    if (anonymousMessage.trim()) {
-      toast({
-        title: "বেনামী মতামত পাঠানো হয়েছে!",
-        description: "আপনার মতামত বেনামীভাবে পাঠানো হয়েছে। ধন্যবাদ!",
-      });
-      setAnonymousMessage("");
-      setShowAnonymous(false);
+  const handleAnonymousOpinion = async () => {
+    if (anonymousMessage.trim() && !isSubmitting) {
+      setIsSubmitting(true);
+      try {
+        await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_ANONYMOUS_TEMPLATE_ID, {
+          anonymous_message: anonymousMessage,
+        });
+
+        toast({
+          title: "বেনামী মতামত পাঠানো হয়েছে!",
+          description: "আপনার মতামত বেনামীভাবে পাঠানো হয়েছে। ধন্যবাদ!",
+        });
+        setAnonymousMessage("");
+        setShowAnonymous(false);
+      } catch (error) {
+        console.error("EmailJS Error:", error);
+        toast({
+          title: "ত্রুটি!",
+          description:
+            "মতামত পাঠাতে সমস্যা হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন।",
+          variant: "destructive",
+        });
+      } finally {
+        setIsSubmitting(false);
+      }
     }
   };
 
@@ -110,7 +164,9 @@ export default function ContactPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Contact Info Card */}
             <Card className="flex flex-col justify-between group transition-all duration-200 bg-card border-border">
+              {/* ... The content of this card remains unchanged ... */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 glow-animation rounded-lg"></div>
 
               <CardHeader className="relative z-10">
@@ -196,6 +252,7 @@ export default function ContactPage() {
               </CardContent>
             </Card>
 
+            {/* Form Card */}
             <Card className="group transition-all duration-200 bg-card border-border">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 glow-animation rounded-lg"></div>
               <CardHeader className="relative z-10">
@@ -210,6 +267,7 @@ export default function ContactPage() {
               <CardContent className="relative z-10">
                 {!showAnonymous ? (
                   <form onSubmit={handleSubmit} className="space-y-4">
+                    {/* ... form fields remain the same ... */}
                     <div>
                       <label
                         htmlFor="name"
@@ -219,6 +277,7 @@ export default function ContactPage() {
                       </label>
                       <Input
                         id="name"
+                        name="name"
                         placeholder="আপনার নাম"
                         className="mt-1 bg-background border-border text-foreground"
                         value={formData.name}
@@ -228,6 +287,7 @@ export default function ContactPage() {
                             name: e.target.value,
                           })
                         }
+                        required
                       />
                     </div>
                     <div>
@@ -239,6 +299,7 @@ export default function ContactPage() {
                       </label>
                       <Input
                         id="email"
+                        name="email"
                         type="email"
                         placeholder="your.email@example.com"
                         className="mt-1 bg-background border-border text-foreground"
@@ -246,6 +307,7 @@ export default function ContactPage() {
                         onChange={(e) =>
                           setFormData({ ...formData, email: e.target.value })
                         }
+                        required
                       />
                     </div>
                     <div>
@@ -257,12 +319,14 @@ export default function ContactPage() {
                       </label>
                       <Input
                         id="subject"
+                        name="subject"
                         placeholder="আপনার মনে কী আছে?"
                         className="mt-1 bg-background border-border text-foreground"
                         value={formData.subject}
                         onChange={(e) =>
                           setFormData({ ...formData, subject: e.target.value })
                         }
+                        required
                       />
                     </div>
                     <div>
@@ -274,21 +338,24 @@ export default function ContactPage() {
                       </label>
                       <Textarea
                         id="message"
+                        name="message"
                         placeholder="আপনি কী ভাবছেন তা বলুন..."
                         className="mt-1 min-h-[120px] resize-none bg-background border-border text-foreground"
                         value={formData.message}
                         onChange={(e) =>
                           setFormData({ ...formData, message: e.target.value })
                         }
+                        required
                       />
                     </div>
                     <div className="flex gap-2">
                       <Button
                         type="submit"
                         className="flex-1 group/btn bg-primary hover:bg-primary/90 text-primary-foreground"
+                        disabled={isSubmitting}
                       >
                         <Mail className="h-4 w-4 mr-2 group-hover/btn:rotate-12 transition-transform duration-300" />
-                        বার্তা পাঠান
+                        {isSubmitting ? "পাঠানো হচ্ছে..." : "বার্তা পাঠান"}
                       </Button>
                       <Button
                         type="button"
@@ -322,14 +389,16 @@ export default function ContactPage() {
                       <Button
                         onClick={handleAnonymousOpinion}
                         className="flex-1 group/btn bg-primary hover:bg-primary/90 text-primary-foreground"
+                        disabled={isSubmitting}
                       >
                         <MessageSquare className="h-4 w-4 mr-2 group-hover/btn:rotate-12 transition-transform duration-300" />
-                        মতামত পাঠান
+                        {isSubmitting ? "পাঠানো হচ্ছে..." : "মতামত পাঠান"}
                       </Button>
                       <Button
                         variant="outline"
                         onClick={() => setShowAnonymous(false)}
                         className="group/btn border-border text-muted-foreground hover:bg-muted bg-transparent"
+                        disabled={isSubmitting}
                       >
                         ফিরে যান
                       </Button>

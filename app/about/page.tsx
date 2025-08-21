@@ -86,7 +86,7 @@ export default function AboutPage() {
             </CardHeader>
             <CardContent className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed relative z-10">
               <p>
-                ঢাকা বিশ্ববিদ্যালয়ের ইতিহাস{" "}
+                ঢাকা বিশ্ববিদ্যালয়{" "}
                 <span className="font-semibold text-primary">
                   শিক্ষার্থী বান্ধব ছিল না
                 </span>{" "}
@@ -185,7 +185,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-gray-50 dark:bg-gray-800 py-16">
+      {/* <section className="bg-gray-50 dark:bg-gray-800 py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold font-serif text-center mb-12 text-black dark:text-white">
@@ -285,7 +285,7 @@ export default function AboutPage() {
             </CardContent>
           </Card>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </div>
